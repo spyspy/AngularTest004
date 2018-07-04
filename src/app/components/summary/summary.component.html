@@ -1,0 +1,15 @@
+<div class="card mycard" style="width: 10rem; margin:10px; float:left; border: red 1px solid" [ngClass]="{increase:isPositive(),decrease:isNegative()}">
+    <img class="card-img-top" src="../assets/photo.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        {{stock?.symbol?.toUpperCase()}}  <br>
+        {{stock?.lastTradePriceOnly | currency: 'USD':'symbol':'.2'}} <br>
+        {{stock?.change | currency:'USD':'symbol':'.2'}} 
+        ({{stock?.changeInPercent | percent:'.2'}})  <br>
+      </h5>
+      
+      <p class="card-text">
+      </p>
+      <a href="#" class="btn btn-primary" onclick='alert("test")'>Go A</a>
+    </div>
+</div>
