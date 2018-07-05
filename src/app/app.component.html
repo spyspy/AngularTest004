@@ -3,15 +3,21 @@
   <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Stock WebSite</a>
   </nav>
-
+  <nav class="mdl-navigation mdl-layout--large-screen-only">
+    <button class="mdl-navigation__link" [routerLink]="['/']">Dashboard</button>
+    <button class="mdl-navigation__link" [routerLink]="['/manage']">Manage</button>
+  </nav>
   <!-- <main class="mdl-layout_content" style="padding:20px;" *ngIf="stocks">
     <app-summary [stock]="stocks[0]"></app-summary>
   </main> -->
 
-  <main class="mdl-layout__content" style="padding: 20px;">
+  <!-- <main class="mdl-layout__content" style="padding: 20px;">
     <dashboard></dashboard>
   </main>
   <main class="mdl-layout__content" style="padding: 20px;">
     <app-manage></app-manage>
+  </main> -->
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <router-outlet></router-outlet>
   </main>
 </div>
