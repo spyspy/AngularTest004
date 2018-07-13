@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [                                               
   {                                                                    
-    path: '',                                                        
+    path: 'dashboard',                                                        
     component: DashboardComponent                                    
   },                                                                  
   {                                                                
@@ -18,7 +18,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes,{ enableTracing: true }) //For Debug only!!
   ],
   exports: [ RouterModule ],
 
