@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Stock WebSite</a>
-  </nav>
-  <nav class="mdl-navigation mdl-layout--large-screen-only">
-    <button class="mdl-navigation__link" style="margin: 30px" [routerLink]="['/dashboard']">Dashboard-Funtion</button>
-    <button class="mdl-navigation__link" style="margin: 30px" [routerLink]="['/manage']">Manage-Funtion</button>
-  </nav>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+    <header class="mdl-layout__header bg-primary">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title" style="color:white;">Stock PICKER</span>
+            <nav class="mdl-navigation mdl-layout--large-screen-only navbar-right navbar-dark" style="text-align:right">
+              <a class="mdl-navigation__link" style="color:white;" [routerLink]="['/dashboard']">Dashboard  </a>
+              <a class="mdl-navigation__link" style="color:white;" [routerLink]="['/manage']">Manage</a>
+            </nav>
+        </div>
+    </header>
+
   <!-- <main class="mdl-layout_content" style="padding:20px;" *ngIf="stocks">
     <app-summary [stock]="stocks[0]"></app-summary>
   </main> -->
