@@ -1,0 +1,29 @@
+<p>{{cluster1 | json}}</p>
+
+<div class="container mt-2">
+        <div class="card card-block">
+          <nav class="navbar navbar-dark bg-inverse mb-1">
+            <h1 class="navbar-brand mb-0">Overall Metrics</h1>
+          </nav>
+          <div class="row">
+              <!--
+                  1. try: [InputUsed]="'fail'"  put a string to a number variable
+                  2. use '' to put a string on [.....]="....."  eg: [title]="'CPU'"
+                  3. There are 4 properties of metric component. Find out definition in metric component.
+                  
+              -->
+            <app-metric class="col-sm-6"
+              [InputUsed]="cpu.used"
+              [InputAvailable]="cpu.available"
+              [title]="'CPU'"
+              [description]="'utilization of CPU cores'">            
+            </app-metric>
+            <app-metric class="col-sm-6"                                  
+            [InputUsed]="mem.used"                                             
+            [InputAvailable]="mem.available"                                  
+            [title]="'Memory'"                                             
+            [description]="'utilization of memory in GB'">            
+          </app-metric>                                             
+        </div>
+      </div>
+    </div>

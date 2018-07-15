@@ -1,0 +1,16 @@
+<div class="card card-block">
+    <div class="card-body">
+        <nav class="navbar navbar-dark bg-primary mb-1" [ngClass]="{'bg-danger':isDanger(),'bg-success':!isDanger()}">
+            <h1 class="navbar-brand mb-0">{{title}}</h1>
+        </nav>
+        <h4 class="card-title">{{value2}}/{{max2}} ({{value2/max2|percent:'1.0-2'}})</h4>
+        <p class="card-text">{{description}}</p>
+
+        <!--ng-boostrap tag
+         key:
+         [value],[max],[type]
+         They are the properties of <ngb-progressbar> tag!! Not from our component!
+        -->
+        <ngb-progressbar [value]="value2" [max]="max2" [type]="isDanger()?'danger':'success'"></ngb-progressbar>
+    </div>
+</div>

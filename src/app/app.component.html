@@ -3,7 +3,7 @@
     <header class="mdl-layout__header bg-dark ">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title" >Stock PICKER</span>
-            <nav class="mdl-navigation mdl-layout--large-screen-only navbar-right" style="color:blue;text-align:right;">
+            <nav class="mdl-navigation mdl-layout--large-screen-only navbar-right" >
               <a class="mdl-navigation__link"  [routerLink]="['/dashboard']">Dashboard </a>
               <a class="mdl-navigation__link"  [routerLink]="['/manage']">Manage</a>
             </nav>
@@ -20,6 +20,8 @@
   <main class="mdl-layout__content" style="padding: 20px;">
     <app-manage></app-manage>
   </main> -->
+  <app-dashboard2></app-dashboard2>
+
   <main class="mdl-layout__content" style="padding: 20px;">
     <router-outlet></router-outlet>
   </main>
